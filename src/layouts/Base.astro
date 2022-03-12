@@ -1,0 +1,44 @@
+---
+  import Nav from '../components/Nav.vue'
+import "../styles/global.css" 
+---
+<html>
+  <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+			body {
+				padding: 2rem;
+			}
+		</style>
+	</head>
+  <body>
+    <main>
+      <Nav client:idle />
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(-3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  main {
+    animation: 0.5s ease-out 0s 1 fadeIn;
+  }
+</style>

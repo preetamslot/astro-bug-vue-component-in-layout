@@ -1,0 +1,22 @@
+---
+// Component Imports
+import Base from "../layouts/Base.astro"
+import Counter from '../components/Counter.vue';
+import Carousel from '../components/Carousel.vue';
+import Image from "astro-imagetools";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+ <Base>
+	<Counter client:visible>
+		<h1>Hello, Vue!</h1>
+	</Counter>
+	<h2>Astro image</h2>
+	<Image
+  src="https://picsum.photos/200/300.jpg"
+  alt="A father holiding his beloved daughter in his arms"
+/>
+	
+	<Carousel client:visible/>
+</Base> 
