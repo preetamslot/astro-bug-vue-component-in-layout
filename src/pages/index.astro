@@ -4,6 +4,8 @@ import Base from "../layouts/Base.astro"
 import Counter from '../components/Counter.vue';
 import Carousel from '../components/Carousel.vue';
 import Image from "astro-imagetools";
+import { Markdown } from "astro/components"
+let mdData = await Astro.fetchContent("./other-page.md")
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -12,11 +14,22 @@ import Image from "astro-imagetools";
 	<Counter client:visible>
 		<h1>Hello, Vue!</h1>
 	</Counter>
+	<h2>Markdown</h2>
+	<Markdown>
+		{mdData[0].md}
+	</Markdown>
+	{JSON.stringify(mdData[0].md)}
+	<hr>
+
 	<h2>Astro image</h2>
+	<!-- <Image
+	src="https://picsum.photos/200/300.jpg"
+	alt="A father holiding his beloved daughter in his arms"
+	/> -->
 	<Image
-  src="https://picsum.photos/200/300.jpg"
-  alt="A father holiding his beloved daughter in his arms"
-/>
+	src="/src/images/image-local.jpg"
+	alt="A father holiding his beloved daughter in his arms"
+	/>
 	
 	<Carousel client:visible/>
 </Base> 

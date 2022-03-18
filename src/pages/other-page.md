@@ -1,8 +1,9 @@
 ---
 layout: ../layouts/PageLayout.astro
 title: Other Page
+md: text & test?
 ---
-# But you are dressed as one...
+# But you are & * # @ dressed as one...
 
 You can't expect to wield supreme power just 'cause some watery tart threw a sword at you! You don't vote for kings. Ah, now we see the violence inherent in the system! Oh, ow! But you are dressed as one...
 
